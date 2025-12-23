@@ -1,28 +1,36 @@
 ### Training 
  1. Download the training and testing dataset
- 2. To train BioIR on the a dataset, e.g., CDD, run
+ 2. To train BioIR on a dataset, e.g., CSD, run
 ```
 cd Single_Composite
-sh train.sh options/CDD.yml
+sh train.sh options/CSD.yml
  ```
 
 ### Evaluation
 1. Download the pre-trained model and place it in ```pretrain_model```
 2. Download the test set, then run
 ```
-python eval.py --data CDD
+python eval.py --data CSD
 ``` 
-to obtain resulting images
-3. Run 
+to obtain the resulting images
+3. Run
 ```
-python metrics_score.py --data CDD
+python metrics_score.py --data CSD
 ``` 
 to obtain the quality results
 
 For deraining tasks, e.g., DID, use
 ```
 python metrics_score.py --data DID --test_y_channel
-``` 
+```
+
+For CDD, run
+```
+python cdd_metrics.py --data CDD
+python cdd_metrics.py --data CDD-Base
+```
+
+
 
 #### Dataset structure
 
