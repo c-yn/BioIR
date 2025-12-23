@@ -34,6 +34,9 @@ Example: use the model pretrained on CDD on your own images:
 ```
 python demo.py --input_dir './demo/degraded/' --result_dir './demo/restored/' --dataset CDD
 ```
+```
+python demo.py --input_dir './demo/degraded/1.png' --result_dir './demo/restored/' --dataset CDD
+```
 
 ## :notebook: Citation
 
