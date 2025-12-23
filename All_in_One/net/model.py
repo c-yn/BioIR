@@ -100,7 +100,7 @@ class AttModule(nn.Module):
         out = self.project_out(out)
 
         return out
-
+## P2F
 class L2H(nn.Module):
     def __init__(self, dim):
         super(L2H, self).__init__()
@@ -125,7 +125,7 @@ class L2H(nn.Module):
         out = torch.sum(high * weights, dim=2)
 
         return shortcut * (1 + out)
-
+## F2P
 class H2L(nn.Module):
     def __init__(self, dim, kernel_size=5):
         super(H2L, self).__init__()
