@@ -28,18 +28,11 @@ Training and Testing instructions for single-degradation&composite degradation a
 
 ## <a name="inference"></a> 💫 Demo
 (For all-in-one demo, please refer to [demo.py](All_in_One/demo.py).)
-To test the pre-trained BioIR models on your own images, you can download the models, place them in ```pretrain_model```, then run
+To test the pre-trained BioIR models on your own images, you can download the models, place them in ```pretrain_model```.
 
+Example: use the model pretrained on CDD on your own images:
 ```
-python demo.py --task Task_Name --input_dir path_to_images --result_dir save_images_here
-```
-Example usage to perform Defocus Deblurring on a directory of images:
-```
-python demo.py --task Single_Image_Defocus_Deblurring --input_dir './demo/degraded/' --result_dir './demo/restored/'
-```
-Example usage to perform Defocus Deblurring on an image directly:
-```
-python demo.py --task Single_Image_Defocus_Deblurring --input_dir './demo/degraded/portrait.jpg' --result_dir './demo/restored/'
+python demo.py --input_dir './demo/degraded/' --result_dir './demo/restored/' --dataset CDD
 ```
 
 ## :notebook: Citation
