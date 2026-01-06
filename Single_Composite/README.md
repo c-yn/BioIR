@@ -35,7 +35,7 @@ python cdd_metrics.py --data CDD-Base
 #### Dataset structure
 
 ```
-    |--Datasets
+    |--datasets
     |    |--CDD
     |    |    |--train
     |    |    |    |--clear
