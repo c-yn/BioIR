@@ -98,7 +98,7 @@ class L2H(nn.Module):
         shortcut = high.clone()
         low = F.adaptive_avg_pool2d(low, (self.r,self.r)).view(*low.shape[:2], -1)
 
-        weights = torch.einsum('nchw, ncs->nshw', high, low)
+        weights = torch.einsum('nchw, ncs->nshw', high, low).contiguous()
         weights = self.conv(weights).unsqueeze(1)
 
         high = torch.mean(high, dim=1, keepdim=True)
